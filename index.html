@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -163,7 +164,7 @@ textarea:focus{border-color:var(--gold);}
 
       <div class="msg-section">
         <div class="msg-title">✦ カードからのメッセージ</div>
-        <div class="msg-text" id="js-card-msg"></div>
+        <div class="msg-text" id="js-card-msg"></div><div style="position:relative;margin-top:12px;"><div class="msg-text" id="js-card-msg-blur" style="filter:blur(5px);user-select:none;pointer-events:none;opacity:0.5;"></div><div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 0%,rgba(10,14,26,0.97) 50%);display:flex;align-items:flex-end;justify-content:center;padding-bottom:16px;"><a href="https://lin.ee/XHDFrA8" target="_blank" style="background:linear-gradient(135deg,rgba(201,168,76,0.15),rgba(201,168,76,0.05));border:1px solid rgba(201,168,76,0.5);border-radius:8px;color:#e8c97a;font-family:Cinzel,serif;font-size:12px;letter-spacing:2px;padding:12px 24px;text-decoration:none;display:inline-block;">✦ 続きをLINEで受け取る（無料）</a></div></div>
       </div>
     </div>
 
@@ -177,7 +178,7 @@ textarea:focus{border-color:var(--gold);}
       <div class="premium-header">✦ カードの深層メッセージ <span class="premium-badge">PREMIUM</span></div>
       <div class="premium-preview">
         <p class="preview-text">このカードがあなたの潜在意識に語りかけているより深いメッセージを解読します。シャドウワークの観点から、あなたが今向き合うべき内なる課題と、それを乗り越えた先に待つ...</p>
-        <div class="premium-overlay"><a href="#" class="unlock-btn">✦ 詳細鑑定を見る（¥500）</a></div>
+        <div class="premium-overlay"><a href="https://lin.ee/XHDFrA8" target="_blank" class="unlock-btn">✦ 詳細鑑定を見る（¥500）</a></div>
       </div>
     </div>
 
@@ -185,7 +186,7 @@ textarea:focus{border-color:var(--gold);}
       <div class="premium-header">✦ 恋愛・仕事・金運への具体的アドバイス <span class="premium-badge">PREMIUM</span></div>
       <div class="premium-preview">
         <p class="preview-text">引いたカードを恋愛・仕事・金運それぞれの観点から詳しく解読します。今のあなたが取るべき具体的な行動と、避けるべきことを明確にお伝えします...</p>
-        <div class="premium-overlay"><a href="#" class="unlock-btn">✦ 詳細鑑定を見る（¥500）</a></div>
+        <div class="premium-overlay"><a href="https://lin.ee/XHDFrA8" target="_blank" class="unlock-btn">✦ 詳細鑑定を見る（¥500）</a></div>
       </div>
     </div>
 
@@ -194,7 +195,7 @@ textarea:focus{border-color:var(--gold);}
       <p class="bundle-desc">タロット ＋ 数秘術 ＋ バードオラクル<br>3つの視点からあなたの運命を深く読み解きます</p>
       <div class="bundle-price">¥1,980</div>
       <div class="bundle-price-sub">通常 ¥3,000 → 特別価格</div>
-      <button class="bundle-btn">✦ 総合鑑定を申し込む ✦</button>
+      <a href="https://lin.ee/XHDFrA8" target="_blank" class="bundle-btn">✦ 総合鑑定を申し込む ✦</a>
     </div>
 
     <button class="retry-btn" id="js-retry">✦ もう一度引く ✦</button>
@@ -375,7 +376,7 @@ document.getElementById('js-btn').addEventListener('click', function() {
         kwHtml += '<span class="card-kw">' + d.card.kw[i] + '</span>';
       }
       document.getElementById('js-card-keywords').innerHTML = kwHtml;
-      document.getElementById('js-card-msg').innerHTML = (d.reversed ? d.card.reversed : d.card.upright).replace(/\n/g, '<br>');
+      var _fullMsg = (d.reversed ? d.card.reversed : d.card.upright); var _half = Math.floor(_fullMsg.length/2); document.getElementById('js-card-msg').innerHTML = _fullMsg.substring(0,_half).replace(/\n/g,'<br>'); document.getElementById('js-card-msg-blur').innerHTML = _fullMsg.substring(_half).replace(/\n/g,'<br>');
 
     } else {
       document.getElementById('js-single-result').style.display = 'none';
