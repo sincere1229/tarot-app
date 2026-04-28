@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -55,7 +54,6 @@ textarea:focus{border-color:var(--gold);}
 .tarot-img{width:200px;height:300px;object-fit:cover;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,0.5),0 0 40px rgba(232,160,192,0.2);border:2px solid rgba(201,168,76,0.3);}
 .card-reversed{transform:rotate(180deg);}
 .reversed-badge{position:absolute;top:-10px;right:-10px;background:linear-gradient(135deg,#8a3030,#c05050);border-radius:20px;padding:4px 10px;font-size:10px;color:white;letter-spacing:1px;}
-
 .card-name-en{font-family:'Cinzel',serif;font-size:18px;color:var(--gold2);letter-spacing:3px;margin-bottom:6px;}
 .card-name-jp{font-size:13px;color:rgba(240,234,220,0.5);letter-spacing:2px;margin-bottom:16px;}
 .card-keywords{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-bottom:0;}
@@ -81,21 +79,71 @@ textarea:focus{border-color:var(--gold);}
 .three-msg-card{font-family:'Cinzel',serif;font-size:13px;color:var(--pink2);letter-spacing:2px;margin-bottom:10px;}
 .three-msg-text{font-size:13px;line-height:2;color:rgba(240,234,220,0.82);}
 
-/* 有料 */
+/* ① 上部CTA（軽め）：¥500直課金 + LINE サブ */
+.top-cta{background:linear-gradient(135deg,rgba(100,60,140,0.3),rgba(60,30,80,0.4));border:1px solid rgba(201,168,76,0.35);border-radius:14px;padding:20px;margin-bottom:20px;text-align:center;}
+.top-cta-lead{font-size:12px;color:rgba(240,234,220,0.5);letter-spacing:1px;margin-bottom:6px;}
+.top-cta-title{font-size:15px;color:#f5e0a0;font-weight:500;margin-bottom:14px;}
+.top-cta-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.top-cta-pay{display:block;background:linear-gradient(135deg,#8a6a20,var(--gold),#8a6a20);background-size:200% 100%;border-radius:8px;color:var(--navy);font-family:Cinzel,serif;font-size:12px;font-weight:700;letter-spacing:1px;padding:12px 16px;text-decoration:none;transition:all 0.3s;}
+.top-cta-pay:hover{background-position:100% 0;transform:translateY(-1px);}
+.top-cta-line{display:block;background:transparent;border:1px solid rgba(201,168,76,0.4);border-radius:8px;color:rgba(240,234,220,0.6);font-family:Cinzel,serif;font-size:11px;letter-spacing:1px;padding:12px 16px;text-decoration:none;transition:all 0.3s;}
+.top-cta-line:hover{border-color:var(--gold);color:var(--gold2);}
+
+/* 有料ブロック */
 .premium-block{background:linear-gradient(135deg,rgba(26,32,64,0.9),rgba(15,22,40,0.95));border:1px solid rgba(201,168,76,0.2);border-radius:16px;margin-bottom:16px;overflow:hidden;}
 .premium-header{padding:18px 28px;border-bottom:1px solid rgba(201,168,76,0.1);font-family:'Cinzel',serif;font-size:12px;color:var(--gold);letter-spacing:3px;display:flex;align-items:center;gap:10px;}
 .premium-badge{background:linear-gradient(135deg,var(--gold),#8a6a20);color:var(--navy);font-size:9px;font-weight:700;padding:3px 8px;border-radius:20px;}
 .premium-preview{padding:20px 28px;position:relative;min-height:90px;}
 .preview-text{font-size:14px;line-height:2;color:rgba(240,234,220,0.4);filter:blur(4px);user-select:none;pointer-events:none;}
 .premium-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 0%,rgba(10,14,26,0.92) 55%);display:flex;align-items:flex-end;justify-content:center;padding-bottom:20px;}
-.unlock-btn{background:linear-gradient(135deg,rgba(201,168,76,0.15),rgba(201,168,76,0.05));border:1px solid rgba(201,168,76,0.5);border-radius:8px;color:var(--gold2);font-family:'Cinzel',serif;font-size:12px;letter-spacing:2px;padding:10px 24px;cursor:pointer;text-decoration:none;display:inline-block;}
+/* ④ ¥500直課金 */
+.unlock-btn{background:linear-gradient(135deg,rgba(201,168,76,0.15),rgba(201,168,76,0.05));border:1px solid rgba(201,168,76,0.5);border-radius:8px;color:var(--gold2);font-family:'Cinzel',serif;font-size:12px;letter-spacing:2px;padding:10px 24px;cursor:pointer;text-decoration:none;display:inline-block;transition:all 0.3s;}
+.unlock-btn:hover{background:rgba(201,168,76,0.2);transform:translateY(-1px);}
 
+/* ② 下部CTA（強め）：2択グリッド */
+.bottom-cta{background:linear-gradient(135deg,rgba(26,32,64,0.95),rgba(15,22,40,0.98));border:1px solid rgba(201,168,76,0.35);border-radius:16px;padding:24px;margin-bottom:16px;text-align:center;}
+.bottom-cta-title{font-family:'Cinzel',serif;font-size:13px;color:var(--gold);letter-spacing:3px;margin-bottom:16px;}
+.bottom-cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;}
+.bc-pay{background:linear-gradient(135deg,rgba(201,168,76,0.2),rgba(201,168,76,0.08));border:1px solid rgba(201,168,76,0.5);border-radius:12px;padding:16px 10px;text-align:center;text-decoration:none;display:block;transition:all 0.3s;}
+.bc-pay:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(201,168,76,0.2);}
+.bc-pay-label{font-size:9px;color:var(--gold);letter-spacing:2px;margin-bottom:4px;}
+.bc-pay-title{font-size:12px;color:var(--white);font-weight:500;margin-bottom:6px;}
+.bc-pay-price{font-family:'Cinzel',serif;font-size:20px;color:var(--gold);margin-bottom:8px;}
+.bc-pay-btn{display:inline-block;background:linear-gradient(135deg,#8a6a20,var(--gold));color:var(--navy);font-size:11px;font-weight:700;border-radius:8px;padding:6px 12px;}
+.bc-line{background:rgba(240,234,220,0.03);border:1px solid rgba(240,234,220,0.12);border-radius:12px;padding:16px 10px;text-align:center;text-decoration:none;display:block;transition:all 0.3s;}
+.bc-line:hover{border-color:rgba(201,168,76,0.3);}
+.bc-line-label{font-size:9px;color:rgba(240,234,220,0.4);letter-spacing:2px;margin-bottom:4px;}
+.bc-line-title{font-size:12px;color:rgba(240,234,220,0.7);margin-bottom:6px;}
+.bc-line-free{font-family:'Cinzel',serif;font-size:20px;color:#7ac4a0;margin-bottom:8px;}
+.bc-line-btn{display:inline-block;background:linear-gradient(135deg,#1a7a3c,#2a8a50);color:#fff;font-size:11px;font-weight:700;border-radius:8px;padding:6px 12px;}
+
+/* ¥1,980直課金 */
+.mid-block{background:linear-gradient(135deg,rgba(100,60,140,0.2),rgba(60,30,80,0.15));border:1px solid rgba(155,89,182,0.35);border-radius:12px;padding:16px;text-align:center;margin-bottom:12px;text-decoration:none;display:block;transition:all 0.3s;}
+.mid-block:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(155,89,182,0.2);}
+.mid-label{font-size:10px;color:#c4a8f0;letter-spacing:2px;margin-bottom:4px;}
+.mid-title{font-size:13px;color:var(--white);font-weight:500;}
+.mid-price{font-family:'Cinzel',serif;font-size:18px;color:#c4a8f0;margin:4px 0;}
+.mid-note{font-size:10px;color:rgba(240,234,220,0.4);}
+
+/* 総合鑑定 */
 .bundle{background:linear-gradient(135deg,rgba(100,80,30,0.3),rgba(60,40,10,0.4));border:1px solid rgba(201,168,76,0.4);border-radius:16px;padding:32px;text-align:center;margin-bottom:20px;}
 .bundle-title{font-family:'Cinzel',serif;font-size:15px;color:var(--gold2);letter-spacing:3px;margin-bottom:10px;}
 .bundle-desc{font-size:13px;color:rgba(240,234,220,0.6);line-height:1.9;margin-bottom:20px;}
-.bundle-price{font-family:'Cinzel',serif;font-size:24px;color:var(--gold);margin-bottom:4px;}
+.bundle-price{font-family:'Cinzel',serif;font-size:28px;color:var(--gold);margin-bottom:4px;}
 .bundle-price-sub{font-size:12px;color:rgba(240,234,220,0.4);margin-bottom:20px;}
-.bundle-btn{background:linear-gradient(135deg,#8a6a20,var(--gold),#8a6a20);border:none;border-radius:8px;color:var(--navy);font-family:'Cinzel',serif;font-size:13px;font-weight:700;letter-spacing:2px;padding:14px 36px;cursor:pointer;}
+.bundle-btn{display:inline-block;background:linear-gradient(135deg,#8a6a20,var(--gold),#8a6a20);border:none;border-radius:8px;color:var(--navy);font-family:'Cinzel',serif;font-size:13px;font-weight:700;letter-spacing:2px;padding:14px 36px;cursor:pointer;text-decoration:none;transition:all 0.3s;}
+.bundle-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(201,168,76,0.3);}
+
+/* ③ 回遊導線 */
+.rec-section{margin-bottom:20px;}
+.rec-title{font-family:'Cinzel',serif;font-size:11px;color:var(--gold);letter-spacing:3px;text-align:center;margin-bottom:14px;opacity:0.8;}
+.rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+.rec-card{background:linear-gradient(135deg,rgba(26,32,64,0.85),rgba(15,22,40,0.9));border:1px solid rgba(201,168,76,0.18);border-radius:12px;padding:14px 8px;text-align:center;text-decoration:none;display:block;transition:all 0.3s;}
+.rec-card:hover{transform:translateY(-3px);border-color:rgba(201,168,76,0.45);}
+.rec-icon{font-size:22px;margin-bottom:6px;display:block;}
+.rec-name{font-size:11px;color:var(--white);font-weight:500;margin-bottom:3px;}
+.rec-desc{font-size:10px;color:rgba(240,234,220,0.4);line-height:1.4;}
+.rec-free{display:inline-block;font-size:9px;padding:2px 7px;border-radius:8px;background:rgba(26,122,60,0.1);color:#7ac4a0;border:1px solid rgba(26,122,60,0.2);margin-top:5px;font-family:'Cinzel',serif;}
 
 .retry-btn{width:100%;padding:13px;background:transparent;border:1px solid rgba(232,160,192,0.2);border-radius:8px;color:var(--pink2);font-family:'Cinzel',serif;font-size:12px;letter-spacing:3px;cursor:pointer;margin-bottom:20px;}
 
@@ -104,14 +152,14 @@ textarea:focus{border-color:var(--gold);}
 .footer-text{font-size:11px;color:rgba(240,234,220,0.25);}
 
 @media(max-width:480px){
-  .question-card,.msg-section,.bundle{padding:24px 18px;}
+  .question-card,.msg-section,.bundle,.bottom-cta{padding:24px 18px;}
   .three-msg-item{padding:18px;}
   .premium-header,.premium-preview{padding-left:18px;padding-right:18px;}
 }
 </style>
 </head>
 <body>
-<!-- Twinkle Star Oracle ヘッダー -->
+<!-- ヘッダー（戻るリンク付き） -->
 <div style="position:sticky;top:0;z-index:1000;background:linear-gradient(135deg,rgba(10,14,26,0.97),rgba(15,20,40,0.98));border-bottom:1px solid rgba(201,168,76,0.2);padding:10px 20px;display:flex;align-items:center;justify-content:space-between;">
   <a href="https://twinkle-lab.jp/star" style="font-size:12px;color:rgba(201,168,76,0.7);text-decoration:none;letter-spacing:1px;">← ポータルに戻る</a>
   <div style="font-family:Cinzel,serif;font-size:12px;color:#c9a84c;letter-spacing:2px;text-align:center;">✦ Twinkle Star Oracle ✦</div>
@@ -129,7 +177,6 @@ textarea:focus{border-color:var(--gold);}
   </header>
 
   <div id="js-form">
-    <!-- モード選択 -->
     <div class="mode-select">
       <div class="mode-btn active" id="js-mode-1">
         <span class="mode-icon">🃏</span>
@@ -142,7 +189,6 @@ textarea:focus{border-color:var(--gold);}
         <div class="mode-desc">過去・現在・未来</div>
       </div>
     </div>
-
     <div class="question-card">
       <div class="q-title">✦ 問いを心に持ってカードを引く ✦</div>
       <textarea id="js-question" placeholder="例：今の恋愛について教えてください。仕事の方向性はこれで良いですか？　など（空欄でも可）"></textarea>
@@ -157,13 +203,15 @@ textarea:focus{border-color:var(--gold);}
 
   <div class="result" id="js-result">
 
-<!-- 上部CTA（結果表示直後） -->
-<div style="background:linear-gradient(135deg,rgba(100,60,140,0.3),rgba(60,30,80,0.4));border:1px solid rgba(201,168,76,0.35);border-radius:14px;padding:20px;margin-bottom:20px;text-align:center;">
-  <div style="font-size:12px;color:rgba(240,234,220,0.5);letter-spacing:1px;margin-bottom:6px;">ここまでは表面の結果です</div>
-  <div style="font-size:15px;color:#f5e0a0;font-weight:500;margin-bottom:14px;">🔮 本当の運命はここからです</div>
-  <a href="https://lin.ee/XHDFrA8" target="_blank" style="display:inline-block;background:linear-gradient(135deg,#8a6a20,#c9a84c,#8a6a20);background-size:200% 100%;border-radius:8px;color:#0a0e1a;font-family:Cinzel,serif;font-size:13px;font-weight:700;letter-spacing:1px;padding:13px 28px;text-decoration:none;">🌟 恋愛・仕事・金運の完全診断を無料で受け取る</a>
-</div>
-
+    <!-- ① 上部CTA（軽め）：¥500直課金 + LINE サブ -->
+    <div class="top-cta">
+      <div class="top-cta-lead">ここまでは表面の結果です</div>
+      <div class="top-cta-title">🔮 本当の運命はここからです</div>
+      <div class="top-cta-row">
+        <a href="https://buy.stripe.com/00w14g2j46C66oBcFl33W04" target="_blank" class="top-cta-pay">✦ 今すぐ詳しく知る（¥500）</a>
+        <a href="https://lin.ee/XHDFrA8" target="_blank" class="top-cta-line">💬 あとで受け取る（LINE）</a>
+      </div>
+    </div>
 
     <!-- 1枚引き結果 -->
     <div id="js-single-result">
@@ -179,7 +227,14 @@ textarea:focus{border-color:var(--gold);}
 
       <div class="msg-section">
         <div class="msg-title">✦ カードからのメッセージ</div>
-        <div class="msg-text" id="js-card-msg"></div><div style="position:relative;margin-top:12px;"><div class="msg-text" id="js-card-msg-blur" style="filter:blur(5px);user-select:none;pointer-events:none;opacity:0.5;"></div><div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 0%,rgba(10,14,26,0.97) 50%);display:flex;align-items:flex-end;justify-content:center;padding-bottom:16px;"><a href="https://lin.ee/XHDFrA8" target="_blank" style="background:linear-gradient(135deg,rgba(201,168,76,0.15),rgba(201,168,76,0.05));border:1px solid rgba(201,168,76,0.5);border-radius:8px;color:#e8c97a;font-family:Cinzel,serif;font-size:12px;letter-spacing:2px;padding:12px 24px;text-decoration:none;display:inline-block;">🌟 恋愛・仕事・金運の完全診断を無料で受け取る</a></div></div>
+        <div class="msg-text" id="js-card-msg"></div>
+        <div style="position:relative;margin-top:12px;">
+          <div class="msg-text" id="js-card-msg-blur" style="filter:blur(5px);user-select:none;pointer-events:none;opacity:0.5;"></div>
+          <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 0%,rgba(10,14,26,0.97) 50%);display:flex;align-items:flex-end;justify-content:center;padding-bottom:16px;">
+            <!-- ④ ¥500直課金（ここもLINEではなく直課金） -->
+            <a href="https://buy.stripe.com/00w14g2j46C66oBcFl33W04" target="_blank" class="unlock-btn">✦ 今すぐ詳しく知る（¥500）</a>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -189,11 +244,14 @@ textarea:focus{border-color:var(--gold);}
       <div class="three-msgs" id="js-three-msgs"></div>
     </div>
 
+    <!-- ④ ¥500直課金 プレミアムブロック -->
     <div class="premium-block">
       <div class="premium-header">✦ カードの深層メッセージ <span class="premium-badge">PREMIUM</span></div>
       <div class="premium-preview">
         <p class="preview-text">このカードがあなたの潜在意識に語りかけているより深いメッセージを解読します。シャドウワークの観点から、あなたが今向き合うべき内なる課題と、それを乗り越えた先に待つ...</p>
-        <div class="premium-overlay"><a href="https://lin.ee/XHDFrA8" target="_blank" class="unlock-btn">✦ 詳細鑑定を見る（¥500）</a></div>
+        <div class="premium-overlay">
+          <a href="https://buy.stripe.com/00w14g2j46C66oBcFl33W04" target="_blank" class="unlock-btn">✦ 今すぐ詳しく知る（¥500）</a>
+        </div>
       </div>
     </div>
 
@@ -201,16 +259,70 @@ textarea:focus{border-color:var(--gold);}
       <div class="premium-header">✦ 恋愛・仕事・金運への具体的アドバイス <span class="premium-badge">PREMIUM</span></div>
       <div class="premium-preview">
         <p class="preview-text">引いたカードを恋愛・仕事・金運それぞれの観点から詳しく解読します。今のあなたが取るべき具体的な行動と、避けるべきことを明確にお伝えします...</p>
-        <div class="premium-overlay"><a href="https://lin.ee/XHDFrA8" target="_blank" class="unlock-btn">✦ 詳細鑑定を見る（¥500）</a></div>
+        <div class="premium-overlay">
+          <a href="https://buy.stripe.com/00w14g2j46C66oBcFl33W04" target="_blank" class="unlock-btn">✦ 今すぐ詳しく知る（¥500）</a>
+        </div>
       </div>
     </div>
 
+    <!-- ② 下部CTA（強め）：2択 + ¥1,980 + ¥3,980 -->
+    <div class="bottom-cta">
+      <div class="bottom-cta-title">✦ もっと深く知りたい方へ ✦</div>
+      <div class="bottom-cta-grid">
+        <a href="https://buy.stripe.com/00w14g2j46C66oBcFl33W04" target="_blank" class="bc-pay">
+          <div class="bc-pay-label">即・結果表示</div>
+          <div class="bc-pay-title">今すぐ詳しく見る</div>
+          <div class="bc-pay-price">¥500</div>
+          <span class="bc-pay-btn">今すぐ鑑定する</span>
+        </a>
+        <a href="https://lin.ee/XHDFrA8" target="_blank" class="bc-line">
+          <div class="bc-line-label">完全無料</div>
+          <div class="bc-line-title">じっくり知りたい方へ</div>
+          <div class="bc-line-free">¥0</div>
+          <span class="bc-line-btn">💬 無料で受け取る</span>
+        </a>
+      </div>
+      <!-- ¥1,980直課金 -->
+      <a href="https://buy.stripe.com/14A8wIbTEf8C9ANfRx33W03" target="_blank" class="mid-block">
+        <div class="mid-label">3テーマ詳細鑑定</div>
+        <div class="mid-title">しっかり知りたい方へ</div>
+        <div class="mid-price">¥1,980</div>
+        <div class="mid-note">恋愛・仕事・金運をまとめて · 即時表示</div>
+      </a>
+    </div>
+
+    <!-- 総合鑑定（¥3,980・直リンク） -->
     <div class="bundle">
-      <div class="bundle-title">✦ 総合鑑定パック ✦</div>
-      <p class="bundle-desc">タロット ＋ 数秘術 ＋ バードオラクル<br>3つの視点からあなたの運命を深く読み解きます</p>
-      <div class="bundle-price">¥1,980</div>
-      <div class="bundle-price-sub">通常 ¥3,000 → 特別価格</div>
-      <a href="https://lin.ee/XHDFrA8" target="_blank" class="bundle-btn">✦ 総合鑑定を申し込む ✦</a>
+      <div class="bundle-title">✦ AI総合鑑定 ✦</div>
+      <p class="bundle-desc">ホロスコープ ＋ 四柱推命 ＋ タロット3枚 ＋ 数秘術<br>過去・現在・未来をAIが完全解析します</p>
+      <div class="bundle-price">¥3,980</div>
+      <div class="bundle-price-sub">即時表示 · PDFダウンロード付き · 🔒 安全な決済</div>
+      <a href="https://twinkle-lab.jp/star/sogo" class="bundle-btn">✦ AI総合鑑定を受ける ✦</a>
+    </div>
+
+    <!-- ③ 回遊導線 -->
+    <div class="rec-section">
+      <div class="rec-title">✦ あなたにおすすめの占い ✦</div>
+      <div class="rec-grid">
+        <a href="https://dream-app-omega.vercel.app" target="_blank" class="rec-card">
+          <span class="rec-icon">🌙</span>
+          <div class="rec-name">夢占い</div>
+          <div class="rec-desc">夢の意味を読み解く</div>
+          <span class="rec-free">FREE</span>
+        </a>
+        <a href="https://numerology-app-lovat.vercel.app" target="_blank" class="rec-card">
+          <span class="rec-icon">🔢</span>
+          <div class="rec-name">数秘術</div>
+          <div class="rec-desc">運命数から使命を知る</div>
+          <span class="rec-free">FREE</span>
+        </a>
+        <a href="https://aicompat-app.vercel.app" target="_blank" class="rec-card">
+          <span class="rec-icon">💕</span>
+          <div class="rec-name">相性占い</div>
+          <div class="rec-desc">2人の運命スコアを算出</div>
+          <span class="rec-free">FREE</span>
+        </a>
+      </div>
     </div>
 
     <button class="retry-btn" id="js-retry">✦ もう一度引く ✦</button>
@@ -219,21 +331,18 @@ textarea:focus{border-color:var(--gold);}
 
   <footer class="footer">
     <div class="footer-logo">✦ TWINKLE STAR ORACLE ✦</div>
-    <p class="footer-text">© 2024 Twinkle Lab. All rights reserved.</p>
+    <p class="footer-text">© 2026 Twinkle Lab. All rights reserved.</p>
   </footer>
 </div>
 
 <script>
-// 星生成
 var starsEl = document.getElementById('js-stars');
 for (var i = 0; i < 100; i++) {
   var s = document.createElement('div');
   s.className = 'star';
   var sz = Math.random() * 2 + 0.5;
-  s.style.width = sz + 'px';
-  s.style.height = sz + 'px';
-  s.style.top = Math.random() * 100 + '%';
-  s.style.left = Math.random() * 100 + '%';
+  s.style.width = sz + 'px'; s.style.height = sz + 'px';
+  s.style.top = Math.random() * 100 + '%'; s.style.left = Math.random() * 100 + '%';
   s.style.setProperty('--dur', (Math.random() * 4 + 2) + 's');
   s.style.animationDelay = Math.random() * 4 + 's';
   s.style.opacity = Math.random() * 0.4 + 0.1;
@@ -241,97 +350,31 @@ for (var i = 0; i < 100; i++) {
 }
 
 var CARDS = [
-  {id:0, en:'The Fool', jp:'愚者', file:'card_00_fool.jpg', kw:['自由','可能性','新しい始まり'],
-   upright:'無限の可能性を秘めた新しい旅の始まりを告げるカードです。あなたの目の前には、まだ誰も踏み入れていない道が広がっています。過去のしがらみや恐れを手放し、純粋な心で一歩を踏み出してください。\n\n失敗を恐れる必要はありません。愚者は無邪気に崖から飛び出しますが、それは勇気と信頼の証です。今のあなたに必要なのは、完璧な計画より行動する勇気です。宇宙があなたを支えています。',
-   reversed:'今は無謀な行動より慎重さが必要なサインです。衝動的な判断を避け、一度立ち止まって状況を見直してください。'},
-
-  {id:1, en:'The Magician', jp:'魔術師', file:'card_01_magician.jpg', kw:['意志力','創造','実現力'],
-   upright:'あなたには夢を現実に変える力がすべて揃っています。魔術師は四元素（火・水・風・土）を自在に操る創造者。今のあなたには、目標を達成するために必要なスキル・情熱・知性・物質的基盤がすべて備わっています。\n\n「できない」という思い込みを手放してください。あなたの意志の力は今最大限に高まっています。行動を起こすことで、望む現実を自らの手で作り出せます。今こそ動く時です。',
-   reversed:'自分の能力を過小評価しているかもしれません。または才能を活かせていない状況にあります。'},
-
-  {id:2, en:'The High Priestess', jp:'女教皇', file:'card_02_high_priestess.jpg', kw:['直感','神秘','内なる知恵'],
-   upright:'答えはすでにあなたの内側にあります。女教皇は直感と潜在意識の守護者。今は外側からの情報より、自分の内なる声に耳を澄ませることが大切です。\n\n急いで決断する必要はありません。瞑想や静かな時間を通じて、深い直感の声を聞いてください。表面には見えない真実が隠れています。あなたの勘は正しいです。その静かな確信を信じてください。',
-   reversed:'直感を無視して論理だけで判断しようとしています。内なる声に耳を傾ける時間が必要です。'},
-
-  {id:3, en:'The Empress', jp:'女帝', file:'card_03_empress.jpg', kw:['豊かさ','創造','愛情'],
-   upright:'豊かさと愛、創造のエネルギーに満ちた素晴らしいカードです。女帝は大地の母として、すべての生命を育み実らせる存在。今のあなたの周りには、愛と豊かさのエネルギーが満ちています。\n\n自分自身を大切にしてください。身体の声を聞き、美しいものに触れ、五感を喜ばせることが開運につながります。また、周囲の人への愛情と気遣いが、さらなる豊かさを引き寄せます。',
-   reversed:'自分を犠牲にしすぎていないか確認してください。自己愛と他者への愛のバランスが大切です。'},
-
-  {id:4, en:'The Emperor', jp:'皇帝', file:'card_04_emperor.jpg', kw:['権威','安定','リーダーシップ'],
-   upright:'強固な基盤を築き、リーダーシップを発揮する時です。皇帝は秩序と構造、権威の象徴。今のあなたには、状況をコントロールし、安定した基盤を作る力があります。\n\n感情より理性で判断してください。計画を立て、規律を持って実行することが成功への道です。また、あなたが思い描くビジョンを実現するための権限と力があなたにはあります。自信を持ってリードしてください。',
-   reversed:'コントロールしすぎているか、または誰かに支配されている状況かもしれません。柔軟性を取り戻しましょう。'},
-
-  {id:5, en:'The Hierophant', jp:'法王', file:'card_05_hierophant.jpg', kw:['伝統','教え','精神的指導'],
-   upright:'伝統や確立された知恵の中に、今のあなたへのヒントがあります。法王は精神的な導き手として、時を超えた教えを伝える存在。信頼できるメンターや教師から学ぶ、または長年の伝統や慣習の中に答えを見出す時期です。\n\n一人で答えを探すより、先人の知恵や信頼できる人のアドバイスを積極的に求めてください。また、あなた自身が誰かを導く立場にある場合、その責任を誠実に果たすことが重要です。',
-   reversed:'既存のルールや慣習に縛られすぎています。自分自身の価値観と向き合う時かもしれません。'},
-
-  {id:6, en:'The Lovers', jp:'恋人', file:'card_06_lovers.jpg', kw:['愛','選択','調和'],
-   upright:'愛と調和、そして重要な選択のカードです。恋人は単に恋愛だけでなく、価値観の一致と魂レベルでの結びつきを表します。今のあなたは、心から大切なものを選ぶ岐路に立っています。\n\n頭ではなく心で選んでください。本当に愛しているもの、魂が「YES」と言うものを選ぶことが、最善の結果をもたらします。また、パートナーシップにおいては、正直なコミュニケーションと相互の尊重が鍵です。',
-   reversed:'価値観の不一致や関係性のアンバランスがあります。自分の本心と向き合う時間が必要です。'},
-
-  {id:7, en:'The Chariot', jp:'戦車', file:'card_07_chariot.jpg', kw:['勝利','意志力','前進'],
-   upright:'困難を乗り越え、勝利を手にする力があなたの中にあります。戦車は意志の力で相反する力を制御し、目標に向かって突き進む存在。今のあなたには、どんな障害も乗り越えるだけの意志力と行動力があります。\n\n迷いを振り切り、前に進んでください。成功への道は一直線ではないかもしれませんが、集中力と決断力があれば必ず突破できます。今は守りでなく攻めの姿勢が吉です。',
-   reversed:'方向性を見失っているか、さまざまな力に引っ張られて前進できていません。焦点を絞り直してください。'},
-
-  {id:8, en:'Strength', jp:'力', file:'card_08_strength.jpg', kw:['内なる強さ','勇気','忍耐'],
-   upright:'真の強さは力ずくではなく、愛と忍耐から生まれます。このカードの女性は猛獣を穏やかに制しています。今のあなたに必要なのは、恐れや衝動を優しさとユーモアで包み込む内なる強さです。\n\n困難な状況にあっても、慌てる必要はありません。あなたの中にある穏やかな力が、最終的にすべての課題を乗り越えさせてくれます。自分の感情と正直に向き合い、それを慈愛の心で受け止めてください。',
-   reversed:'自信を失っているか、感情のコントロールが難しくなっています。自分への優しさが必要です。'},
-
-  {id:9, en:'The Hermit', jp:'隠者', file:'card_09_hermit.jpg', kw:['内省','孤独','智慧'],
-   upright:'内なる光を頼りに、静かに真実を探求する時期です。隠者は群衆から離れ、自分だけの灯火で道を照らします。今は外の世界の喧騒より、自分の内側と向き合う孤独な時間が大切です。\n\n一人になる時間を恐れないでください。その静寂の中にこそ、あなたが長い間探し求めていた答えがあります。また、あなたの経験から得た智慧を、光を求める人と分かち合うことも大切な使命です。',
-   reversed:'孤立しすぎているか、反対に一人になる必要があるのに外の刺激を求めすぎています。'},
-
-  {id:10, en:'Wheel of Fortune', jp:'運命の輪', file:'card_10_wheel.jpg', kw:['転機','運命','サイクル'],
-   upright:'運命の輪が回り、新しいサイクルが始まろうとしています。良い変化が訪れる兆しです。今まで停滞していたことが動き始め、思いがけない幸運が舞い込む可能性があります。\n\n変化の流れに乗ってください。人生には上昇と下降のサイクルがありますが、今はまさに上昇の波が来ています。過去の失敗や苦労が、ここから報われていく時期です。運命があなたの味方をしています。',
-   reversed:'状況が思うように進まないと感じる時期です。しかし、これも必要なサイクル。流れに抵抗せず受け入れて。'},
-
-  {id:11, en:'Justice', jp:'正義', file:'card_11_justice.jpg', kw:['公正','真実','バランス'],
-   upright:'公正と真実のカードです。今のあなたに必要なのは、感情より事実に基づいた冷静な判断です。または、あなたが正しいと信じてやってきたことが、正当に評価される時が来ています。\n\n誠実さと公正さを持って行動してください。あなたの行いは必ず相応の結果として返ってきます。また、重要な決断をする場合は、すべての側面を公平に見た上で判断することが大切です。',
-   reversed:'不公平な状況に置かれているか、または自分自身が偏った判断をしているかもしれません。'},
-
-  {id:12, en:'The Hanged Man', jp:'吊るされた男', file:'card_12_hanged.jpg', kw:['待機','視点の転換','犠牲'],
-   upright:'今は動くより待つことが最善のカードです。吊るされた男は自ら選んで逆さまになり、新しい視点で世界を見ています。今のあなたに必要なのは、立ち止まって物事を別の角度から見ること。\n\nいつもと違う視点で状況を眺めてみてください。今まで見えていなかったものが見えてきます。また、一時的な停滞や待機期間は、実は内面の成長のための貴重な時間です。焦らず流れに委ねてください。',
-   reversed:'必要な変化を先延ばしにしています。または意味のない犠牲を払い続けています。'},
-
-  {id:13, en:'Death', jp:'死神', file:'card_13_death.jpg', kw:['変容','終わりと始まり','解放'],
-   upright:'死神は実際の死を意味せず、古いものの終わりと新しいものの始まりを表す変容のカードです。今のあなたには、何か古い習慣・関係・状況を手放す時が来ています。\n\n手放すことを恐れないでください。終わりは必ず新しい始まりを連れてきます。冬が終わって春が来るように、今起きている変化はあなたをより高いステージへと引き上げるための必要なプロセスです。変容を受け入れましょう。',
-   reversed:'変化への抵抗が続いています。手放すべきものを手放せずにいることが停滞を生んでいます。'},
-
-  {id:14, en:'Temperance', jp:'節制', file:'card_14_temperance.jpg', kw:['調和','バランス','忍耐'],
-   upright:'調和とバランスのカードです。天使が二つのカップの間で水を注ぎ合うように、今のあなたに必要なのは極端を避け、中庸を保つことです。\n\n急がず、焦らず、丁寧に進んでください。今は大きな変化より、日々の小さな調和を積み重ねることが最善です。また、異なる要素を上手く統合する力があなたにはあります。その才能を活かして、バランスの取れた解決策を見つけましょう。',
-   reversed:'過剰か不足か、どちらかに偏りすぎています。生活のバランスを見直す時期です。'},
-
-  {id:15, en:'The Devil', jp:'悪魔', file:'card_15_devil.jpg', kw:['執着','依存','解放'],
-   upright:'悪魔のカードは実際の悪ではなく、あなたを縛っている執着や依存を示しています。今のあなたは何かに縛られていると感じているかもしれません。しかし、鎖は緩く、いつでも外せます。\n\n何に縛られているか、正直に見つめてください。恐れ・執着・悪習慣・有害な関係など、手放すべきものが見えてきます。真の解放は内側から生まれます。あなたには自由を選ぶ力があります。',
-   reversed:'縛りから解放されつつあります。または依存から立ち直ろうとしている過程にいます。'},
-
-  {id:16, en:'The Tower', jp:'塔', file:'card_16_tower.jpg', kw:['突然の変化','崩壊','啓示'],
-   upright:'突然の変化や崩壊を示すカードですが、これは偽りの基盤を壊し、真実の上に立つためのプロセスです。今まで当然と思っていたものが揺らぐかもしれませんが、それは新しい真実を見るために必要なことです。\n\n嵐が過ぎれば、より強固な基盤が残ります。壊れているものは最初から壊れる運命にあったのです。今の混乱の中から、本当に大切なものが見えてきます。変化を恐れず、その後に来る再生を信じてください。',
-   reversed:'変化への強い抵抗があります。または既に嵐を乗り越えつつある段階にいます。'},
-
-  {id:17, en:'The Star', jp:'星', file:'card_17_star.jpg', kw:['希望','癒し','インスピレーション'],
-   upright:'希望と癒しの光が差し込む、最も美しいカードの一つです。嵐の後に輝く星のように、今のあなたに新しい希望と可能性の光が訪れています。\n\n自分を信じてください。どんな困難な時期を経ても、あなたには本来の輝きを取り戻す力があります。今感じているインスピレーションや夢を大切にしてください。それはあなたの魂が正しい方向を指し示しているサインです。',
-   reversed:'希望を見失いかけています。または自己不信が強くなっています。内なる光はまだそこにあります。'},
-
-  {id:18, en:'The Moon', jp:'月', file:'card_18_moon.jpg', kw:['幻想','直感','潜在意識'],
-   upright:'月明かりの下では、すべてが現実と異なって見えます。今のあなたは混乱や幻想の中にいるかもしれません。しかし、その不確かさの中にこそ、深い潜在意識からのメッセージが隠れています。\n\n見えているものを鵜呑みにしないでください。今の状況には隠れた真実があります。直感を信じ、夢や潜在意識からのメッセージに注意を払ってください。霧が晴れれば、本当の姿が見えてきます。',
-   reversed:'混乱や幻想から少しずつ抜け出せています。真実が明らかになりつつある段階です。'},
-
-  {id:19, en:'The Sun', jp:'太陽', file:'card_19_sun.jpg', kw:['喜び','成功','活力'],
-   upright:'64枚のタロットの中でも最高の吉カードの一つです！太陽は喜び・成功・活力・明るさのすべてを象徴します。今のあなたには、最高のエネルギーが満ちています。\n\n自信を持って前進してください！今取り組んでいることは必ず成功します。人間関係も仕事も恋愛も、今は最高の流れの中にいます。この幸運のエネルギーを思い切り活かして、心から望むことに向かって全力で動いてください。',
-   reversed:'一時的に活力が低下しています。しかし太陽は必ず昇ります。休息を取り、エネルギーを回復させて。'},
-
-  {id:20, en:'Judgement', jp:'審判', file:'card_20_judgement.jpg', kw:['覚醒','再生','召命'],
-   upright:'魂の覚醒と再生を告げるカードです。天使のラッパが鳴り響き、死者が蘇るように、今のあなたは新しい自分として目覚める時が来ています。\n\n過去を手放し、より高い自分へと生まれ変わる時です。長い間抑えてきた本当の使命や、魂が呼んでいる方向に向き合ってください。人生の新しいステージが始まろうとしています。あなたは召命を受けています。',
-   reversed:'自己評価が低く、変容への準備ができていない状態です。または過去の後悔に縛られています。'},
-
-  {id:21, en:'The World', jp:'世界', file:'card_21_world.jpg', kw:['完成','達成','統合'],
-   upright:'完成と達成の最高のカードです！世界は長い旅の終わりと、新しい次元での始まりを告げます。今のあなたは一つのサイクルを完全に成し遂げ、豊かな実りを手にする時が来ています。\n\nあなたが積み重ねてきたすべてが報われます。目標の達成・夢の実現・願いの成就が近づいています。この成功を心から祝い、次のより大きな夢へと歩み出す準備をしてください。世界はあなたのものです。',
-   reversed:'ゴール直前での停滞や、完成を急ぎすぎています。最後の仕上げを丁寧に行ってください。'},
+  {id:0,en:'The Fool',jp:'愚者',file:'card_00_fool.jpg',kw:['自由','可能性','新しい始まり'],upright:'無限の可能性を秘めた新しい旅の始まりを告げるカードです。あなたの目の前には、まだ誰も踏み入れていない道が広がっています。過去のしがらみや恐れを手放し、純粋な心で一歩を踏み出してください。\n\n失敗を恐れる必要はありません。愚者は無邪気に崖から飛び出しますが、それは勇気と信頼の証です。今のあなたに必要なのは、完璧な計画より行動する勇気です。宇宙があなたを支えています。',reversed:'今は無謀な行動より慎重さが必要なサインです。衝動的な判断を避け、一度立ち止まって状況を見直してください。'},
+  {id:1,en:'The Magician',jp:'魔術師',file:'card_01_magician.jpg',kw:['意志力','創造','実現力'],upright:'あなたには夢を現実に変える力がすべて揃っています。魔術師は四元素（火・水・風・土）を自在に操る創造者。今のあなたには、目標を達成するために必要なスキル・情熱・知性・物質的基盤がすべて備わっています。\n\n「できない」という思い込みを手放してください。あなたの意志の力は今最大限に高まっています。行動を起こすことで、望む現実を自らの手で作り出せます。今こそ動く時です。',reversed:'自分の能力を過小評価しているかもしれません。または才能を活かせていない状況にあります。'},
+  {id:2,en:'The High Priestess',jp:'女教皇',file:'card_02_high_priestess.jpg',kw:['直感','神秘','内なる知恵'],upright:'答えはすでにあなたの内側にあります。女教皇は直感と潜在意識の守護者。今は外側からの情報より、自分の内なる声に耳を澄ませることが大切です。\n\n急いで決断する必要はありません。瞑想や静かな時間を通じて、深い直感の声を聞いてください。表面には見えない真実が隠れています。あなたの勘は正しいです。その静かな確信を信じてください。',reversed:'直感を無視して論理だけで判断しようとしています。内なる声に耳を傾ける時間が必要です。'},
+  {id:3,en:'The Empress',jp:'女帝',file:'card_03_empress.jpg',kw:['豊かさ','創造','愛情'],upright:'豊かさと愛、創造のエネルギーに満ちた素晴らしいカードです。女帝は大地の母として、すべての生命を育み実らせる存在。今のあなたの周りには、愛と豊かさのエネルギーが満ちています。\n\n自分自身を大切にしてください。身体の声を聞き、美しいものに触れ、五感を喜ばせることが開運につながります。また、周囲の人への愛情と気遣いが、さらなる豊かさを引き寄せます。',reversed:'自分を犠牲にしすぎていないか確認してください。自己愛と他者への愛のバランスが大切です。'},
+  {id:4,en:'The Emperor',jp:'皇帝',file:'card_04_emperor.jpg',kw:['権威','安定','リーダーシップ'],upright:'強固な基盤を築き、リーダーシップを発揮する時です。皇帝は秩序と構造、権威の象徴。今のあなたには、状況をコントロールし、安定した基盤を作る力があります。\n\n感情より理性で判断してください。計画を立て、規律を持って実行することが成功への道です。また、あなたが思い描くビジョンを実現するための権限と力があなたにはあります。自信を持ってリードしてください。',reversed:'コントロールしすぎているか、または誰かに支配されている状況かもしれません。柔軟性を取り戻しましょう。'},
+  {id:5,en:'The Hierophant',jp:'法王',file:'card_05_hierophant.jpg',kw:['伝統','教え','精神的指導'],upright:'伝統や確立された知恵の中に、今のあなたへのヒントがあります。法王は精神的な導き手として、時を超えた教えを伝える存在。信頼できるメンターや教師から学ぶ、または長年の伝統や慣習の中に答えを見出す時期です。\n\n一人で答えを探すより、先人の知恵や信頼できる人のアドバイスを積極的に求めてください。また、あなた自身が誰かを導く立場にある場合、その責任を誠実に果たすことが重要です。',reversed:'既存のルールや慣習に縛られすぎています。自分自身の価値観と向き合う時かもしれません。'},
+  {id:6,en:'The Lovers',jp:'恋人',file:'card_06_lovers.jpg',kw:['愛','選択','調和'],upright:'愛と調和、そして重要な選択のカードです。恋人は単に恋愛だけでなく、価値観の一致と魂レベルでの結びつきを表します。今のあなたは、心から大切なものを選ぶ岐路に立っています。\n\n頭ではなく心で選んでください。本当に愛しているもの、魂が「YES」と言うものを選ぶことが、最善の結果をもたらします。また、パートナーシップにおいては、正直なコミュニケーションと相互の尊重が鍵です。',reversed:'価値観の不一致や関係性のアンバランスがあります。自分の本心と向き合う時間が必要です。'},
+  {id:7,en:'The Chariot',jp:'戦車',file:'card_07_chariot.jpg',kw:['勝利','意志力','前進'],upright:'困難を乗り越え、勝利を手にする力があなたの中にあります。戦車は意志の力で相反する力を制御し、目標に向かって突き進む存在。今のあなたには、どんな障害も乗り越えるだけの意志力と行動力があります。\n\n迷いを振り切り、前に進んでください。成功への道は一直線ではないかもしれませんが、集中力と決断力があれば必ず突破できます。今は守りでなく攻めの姿勢が吉です。',reversed:'方向性を見失っているか、さまざまな力に引っ張られて前進できていません。焦点を絞り直してください。'},
+  {id:8,en:'Strength',jp:'力',file:'card_08_strength.jpg',kw:['内なる強さ','勇気','忍耐'],upright:'真の強さは力ずくではなく、愛と忍耐から生まれます。このカードの女性は猛獣を穏やかに制しています。今のあなたに必要なのは、恐れや衝動を優しさとユーモアで包み込む内なる強さです。\n\n困難な状況にあっても、慌てる必要はありません。あなたの中にある穏やかな力が、最終的にすべての課題を乗り越えさせてくれます。自分の感情と正直に向き合い、それを慈愛の心で受け止めてください。',reversed:'自信を失っているか、感情のコントロールが難しくなっています。自分への優しさが必要です。'},
+  {id:9,en:'The Hermit',jp:'隠者',file:'card_09_hermit.jpg',kw:['内省','孤独','智慧'],upright:'内なる光を頼りに、静かに真実を探求する時期です。隠者は群衆から離れ、自分だけの灯火で道を照らします。今は外の世界の喧騒より、自分の内側と向き合う孤独な時間が大切です。\n\n一人になる時間を恐れないでください。その静寂の中にこそ、あなたが長い間探し求めていた答えがあります。また、あなたの経験から得た智慧を、光を求める人と分かち合うことも大切な使命です。',reversed:'孤立しすぎているか、反対に一人になる必要があるのに外の刺激を求めすぎています。'},
+  {id:10,en:'Wheel of Fortune',jp:'運命の輪',file:'card_10_wheel.jpg',kw:['転機','運命','サイクル'],upright:'運命の輪が回り、新しいサイクルが始まろうとしています。良い変化が訪れる兆しです。今まで停滞していたことが動き始め、思いがけない幸運が舞い込む可能性があります。\n\n変化の流れに乗ってください。人生には上昇と下降のサイクルがありますが、今はまさに上昇の波が来ています。過去の失敗や苦労が、ここから報われていく時期です。運命があなたの味方をしています。',reversed:'状況が思うように進まないと感じる時期です。しかし、これも必要なサイクル。流れに抵抗せず受け入れて。'},
+  {id:11,en:'Justice',jp:'正義',file:'card_11_justice.jpg',kw:['公正','真実','バランス'],upright:'公正と真実のカードです。今のあなたに必要なのは、感情より事実に基づいた冷静な判断です。または、あなたが正しいと信じてやってきたことが、正当に評価される時が来ています。\n\n誠実さと公正さを持って行動してください。あなたの行いは必ず相応の結果として返ってきます。また、重要な決断をする場合は、すべての側面を公平に見た上で判断することが大切です。',reversed:'不公平な状況に置かれているか、または自分自身が偏った判断をしているかもしれません。'},
+  {id:12,en:'The Hanged Man',jp:'吊るされた男',file:'card_12_hanged.jpg',kw:['待機','視点の転換','犠牲'],upright:'今は動くより待つことが最善のカードです。吊るされた男は自ら選んで逆さまになり、新しい視点で世界を見ています。今のあなたに必要なのは、立ち止まって物事を別の角度から見ること。\n\nいつもと違う視点で状況を眺めてみてください。今まで見えていなかったものが見えてきます。また、一時的な停滞や待機期間は、実は内面の成長のための貴重な時間です。焦らず流れに委ねてください。',reversed:'必要な変化を先延ばしにしています。または意味のない犠牲を払い続けています。'},
+  {id:13,en:'Death',jp:'死神',file:'card_13_death.jpg',kw:['変容','終わりと始まり','解放'],upright:'死神は実際の死を意味せず、古いものの終わりと新しいものの始まりを表す変容のカードです。今のあなたには、何か古い習慣・関係・状況を手放す時が来ています。\n\n手放すことを恐れないでください。終わりは必ず新しい始まりを連れてきます。冬が終わって春が来るように、今起きている変化はあなたをより高いステージへと引き上げるための必要なプロセスです。変容を受け入れましょう。',reversed:'変化への抵抗が続いています。手放すべきものを手放せずにいることが停滞を生んでいます。'},
+  {id:14,en:'Temperance',jp:'節制',file:'card_14_temperance.jpg',kw:['調和','バランス','忍耐'],upright:'調和とバランスのカードです。天使が二つのカップの間で水を注ぎ合うように、今のあなたに必要なのは極端を避け、中庸を保つことです。\n\n急がず、焦らず、丁寧に進んでください。今は大きな変化より、日々の小さな調和を積み重ねることが最善です。また、異なる要素を上手く統合する力があなたにはあります。その才能を活かして、バランスの取れた解決策を見つけましょう。',reversed:'過剰か不足か、どちらかに偏りすぎています。生活のバランスを見直す時期です。'},
+  {id:15,en:'The Devil',jp:'悪魔',file:'card_15_devil.jpg',kw:['執着','依存','解放'],upright:'悪魔のカードは実際の悪ではなく、あなたを縛っている執着や依存を示しています。今のあなたは何かに縛られていると感じているかもしれません。しかし、鎖は緩く、いつでも外せます。\n\n何に縛られているか、正直に見つめてください。恐れ・執着・悪習慣・有害な関係など、手放すべきものが見えてきます。真の解放は内側から生まれます。あなたには自由を選ぶ力があります。',reversed:'縛りから解放されつつあります。または依存から立ち直ろうとしている過程にいます。'},
+  {id:16,en:'The Tower',jp:'塔',file:'card_16_tower.jpg',kw:['突然の変化','崩壊','啓示'],upright:'突然の変化や崩壊を示すカードですが、これは偽りの基盤を壊し、真実の上に立つためのプロセスです。今まで当然と思っていたものが揺らぐかもしれませんが、それは新しい真実を見るために必要なことです。\n\n嵐が過ぎれば、より強固な基盤が残ります。壊れているものは最初から壊れる運命にあったのです。今の混乱の中から、本当に大切なものが見えてきます。変化を恐れず、その後に来る再生を信じてください。',reversed:'変化への強い抵抗があります。または既に嵐を乗り越えつつある段階にいます。'},
+  {id:17,en:'The Star',jp:'星',file:'card_17_star.jpg',kw:['希望','癒し','インスピレーション'],upright:'希望と癒しの光が差し込む、最も美しいカードの一つです。嵐の後に輝く星のように、今のあなたに新しい希望と可能性の光が訪れています。\n\n自分を信じてください。どんな困難な時期を経ても、あなたには本来の輝きを取り戻す力があります。今感じているインスピレーションや夢を大切にしてください。それはあなたの魂が正しい方向を指し示しているサインです。',reversed:'希望を見失いかけています。または自己不信が強くなっています。内なる光はまだそこにあります。'},
+  {id:18,en:'The Moon',jp:'月',file:'card_18_moon.jpg',kw:['幻想','直感','潜在意識'],upright:'月明かりの下では、すべてが現実と異なって見えます。今のあなたは混乱や幻想の中にいるかもしれません。しかし、その不確かさの中にこそ、深い潜在意識からのメッセージが隠れています。\n\n見えているものを鵜呑みにしないでください。今の状況には隠れた真実があります。直感を信じ、夢や潜在意識からのメッセージに注意を払ってください。霧が晴れれば、本当の姿が見えてきます。',reversed:'混乱や幻想から少しずつ抜け出せています。真実が明らかになりつつある段階です。'},
+  {id:19,en:'The Sun',jp:'太陽',file:'card_19_sun.jpg',kw:['喜び','成功','活力'],upright:'64枚のタロットの中でも最高の吉カードの一つです！太陽は喜び・成功・活力・明るさのすべてを象徴します。今のあなたには、最高のエネルギーが満ちています。\n\n自信を持って前進してください！今取り組んでいることは必ず成功します。人間関係も仕事も恋愛も、今は最高の流れの中にいます。この幸運のエネルギーを思い切り活かして、心から望むことに向かって全力で動いてください。',reversed:'一時的に活力が低下しています。しかし太陽は必ず昇ります。休息を取り、エネルギーを回復させて。'},
+  {id:20,en:'Judgement',jp:'審判',file:'card_20_judgement.jpg',kw:['覚醒','再生','召命'],upright:'魂の覚醒と再生を告げるカードです。天使のラッパが鳴り響き、死者が蘇るように、今のあなたは新しい自分として目覚める時が来ています。\n\n過去を手放し、より高い自分へと生まれ変わる時です。長い間抑えてきた本当の使命や、魂が呼んでいる方向に向き合ってください。人生の新しいステージが始まろうとしています。あなたは召命を受けています。',reversed:'自己評価が低く、変容への準備ができていない状態です。または過去の後悔に縛られています。'},
+  {id:21,en:'The World',jp:'世界',file:'card_21_world.jpg',kw:['完成','達成','統合'],upright:'完成と達成の最高のカードです！世界は長い旅の終わりと、新しい次元での始まりを告げます。今のあなたは一つのサイクルを完全に成し遂げ、豊かな実りを手にする時が来ています。\n\nあなたが積み重ねてきたすべてが報われます。目標の達成・夢の実現・願いの成就が近づいています。この成功を心から祝い、次のより大きな夢へと歩み出す準備をしてください。世界はあなたのものです。',reversed:'ゴール直前での停滞や、完成を急ぎすぎています。最後の仕上げを丁寧に行ってください。'},
 ];
 
-var THREE_POSITIONS = ['過去', '現在', '未来'];
-
+var THREE_POSITIONS = ['過去','現在','未来'];
 var currentMode = 1;
 
 document.getElementById('js-mode-1').addEventListener('click', function() {
@@ -339,20 +382,16 @@ document.getElementById('js-mode-1').addEventListener('click', function() {
   document.getElementById('js-mode-1').classList.add('active');
   document.getElementById('js-mode-3').classList.remove('active');
 });
-
 document.getElementById('js-mode-3').addEventListener('click', function() {
   currentMode = 3;
   document.getElementById('js-mode-3').classList.add('active');
   document.getElementById('js-mode-1').classList.remove('active');
 });
 
-function getRandom(max) {
-  return Math.floor(Math.random() * max);
-}
+function getRandom(max) { return Math.floor(Math.random() * max); }
 
 function drawCards(count) {
-  var drawn = [];
-  var used = [];
+  var drawn = [], used = [];
   while (drawn.length < count) {
     var idx = getRandom(CARDS.length);
     if (used.indexOf(idx) === -1) {
@@ -379,10 +418,7 @@ document.getElementById('js-btn').addEventListener('click', function() {
       var img = document.getElementById('js-card-img');
       img.src = d.card.file;
       img.className = 'tarot-img' + (d.reversed ? ' card-reversed' : '');
-
-      var badge = document.getElementById('js-reversed-badge');
-      badge.style.display = d.reversed ? 'block' : 'none';
-
+      document.getElementById('js-reversed-badge').style.display = d.reversed ? 'block' : 'none';
       document.getElementById('js-card-name-en').textContent = d.card.en;
       document.getElementById('js-card-name-jp').textContent = d.card.jp;
 
@@ -391,31 +427,29 @@ document.getElementById('js-btn').addEventListener('click', function() {
         kwHtml += '<span class="card-kw">' + d.card.kw[i] + '</span>';
       }
       document.getElementById('js-card-keywords').innerHTML = kwHtml;
-      var _fullMsg = (d.reversed ? d.card.reversed : d.card.upright); var _half = Math.floor(_fullMsg.length/2); document.getElementById('js-card-msg').innerHTML = _fullMsg.substring(0,_half).replace(/\n/g,'<br>'); document.getElementById('js-card-msg-blur').innerHTML = _fullMsg.substring(_half).replace(/\n/g,'<br>');
+
+      var _fullMsg = (d.reversed ? d.card.reversed : d.card.upright);
+      var _half = Math.floor(_fullMsg.length / 2);
+      document.getElementById('js-card-msg').innerHTML = _fullMsg.substring(0, _half).replace(/\n/g, '<br>');
+      document.getElementById('js-card-msg-blur').innerHTML = _fullMsg.substring(_half).replace(/\n/g, '<br>');
 
     } else {
       document.getElementById('js-single-result').style.display = 'none';
       document.getElementById('js-three-result').style.display = 'block';
 
-      var cardsHtml = '';
-      var msgsHtml = '';
-
+      var cardsHtml = '', msgsHtml = '';
       for (var j = 0; j < drawn.length; j++) {
         var dc = drawn[j];
         cardsHtml += '<div class="three-card-item">' +
           '<div class="three-pos">' + THREE_POSITIONS[j] + '</div>' +
           '<img class="three-img' + (dc.reversed ? ' card-reversed' : '') + '" src="' + dc.card.file + '" alt="' + dc.card.jp + '" />' +
           '<div class="three-name">' + dc.card.en + '</div>' +
-          '<div class="three-name-jp">' + dc.card.jp + (dc.reversed ? '（逆）' : '') + '</div>' +
-          '</div>';
-
+          '<div class="three-name-jp">' + dc.card.jp + (dc.reversed ? '（逆）' : '') + '</div></div>';
         msgsHtml += '<div class="three-msg-item">' +
           '<div class="three-msg-pos">✦ ' + THREE_POSITIONS[j] + '</div>' +
           '<div class="three-msg-card">' + dc.card.en + ' ／ ' + dc.card.jp + '</div>' +
-          '<div class="three-msg-text">' + (dc.reversed ? dc.card.reversed : dc.card.upright.split('\n')[0]) + '</div>' +
-          '</div>';
+          '<div class="three-msg-text">' + (dc.reversed ? dc.card.reversed : dc.card.upright.split('\n')[0]) + '</div></div>';
       }
-
       document.getElementById('js-three-cards').innerHTML = cardsHtml;
       document.getElementById('js-three-msgs').innerHTML = msgsHtml;
     }
@@ -433,13 +467,13 @@ document.getElementById('js-retry').addEventListener('click', function() {
 });
 </script>
 
-<!-- 固定LINEバナー -->
+<!-- 固定バナー：¥500直課金に変更 -->
 <div id="fixed-line-banner" style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:linear-gradient(135deg,#1a0a20,#0a0e1a);border-top:1px solid rgba(201,168,76,0.4);padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 -4px 20px rgba(0,0,0,0.4);">
   <div style="flex:1;">
-    <div style="font-size:11px;color:rgba(240,234,220,0.5);letter-spacing:1px;margin-bottom:2px;">🌟 完全無料</div>
-    <div style="font-size:13px;color:#f0eadc;font-weight:500;line-height:1.4;">恋愛・仕事・金運の完全診断を受け取る</div>
+    <div style="font-size:11px;color:rgba(240,234,220,0.5);letter-spacing:1px;margin-bottom:2px;">🔮 即・結果表示</div>
+    <div style="font-size:13px;color:#f0eadc;font-weight:500;line-height:1.4;">今すぐ詳しく知る（¥500）</div>
   </div>
-  <a href="https://lin.ee/XHDFrA8" target="_blank" style="background:linear-gradient(135deg,#8a6a20,#c9a84c,#8a6a20);background-size:200% 100%;border:none;border-radius:8px;color:#0a0e1a;font-family:Cinzel,serif;font-size:12px;font-weight:700;letter-spacing:1px;padding:12px 20px;text-decoration:none;white-space:nowrap;flex-shrink:0;">無料で受け取る →</a>
+  <a href="https://buy.stripe.com/00w14g2j46C66oBcFl33W04" target="_blank" style="background:linear-gradient(135deg,#8a6a20,#c9a84c,#8a6a20);background-size:200% 100%;border:none;border-radius:8px;color:#0a0e1a;font-family:Cinzel,serif;font-size:12px;font-weight:700;letter-spacing:1px;padding:12px 20px;text-decoration:none;white-space:nowrap;flex-shrink:0;">今すぐ鑑定する →</a>
 </div>
 <div style="height:70px;"></div>
 </body>
