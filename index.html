@@ -21,7 +21,6 @@ body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;backg
 .subtitle{font-size:13px;color:rgba(240,234,220,0.5);letter-spacing:2px;}
 .divider{width:120px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:20px auto;}
 
-/* モード選択 */
 .mode-select{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:30px;}
 .mode-btn{background:linear-gradient(135deg,rgba(26,32,64,0.9),rgba(15,22,40,0.95));border:1px solid rgba(201,168,76,0.2);border-radius:12px;padding:20px;text-align:center;cursor:pointer;transition:all 0.3s;}
 .mode-btn:hover,.mode-btn.active{border-color:var(--gold);background:linear-gradient(135deg,rgba(60,48,20,0.5),rgba(40,30,10,0.4));box-shadow:0 0 20px rgba(201,168,76,0.15);}
@@ -29,7 +28,6 @@ body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;backg
 .mode-title{font-family:'Cinzel',serif;font-size:13px;color:var(--gold2);letter-spacing:2px;margin-bottom:4px;}
 .mode-desc{font-size:11px;color:rgba(240,234,220,0.4);letter-spacing:1px;}
 
-/* 質問入力 */
 .question-card{background:linear-gradient(135deg,rgba(26,32,64,0.9),rgba(15,22,40,0.95));border:1px solid rgba(201,168,76,0.2);border-radius:16px;padding:32px;margin-bottom:24px;}
 .q-title{font-family:'Cinzel',serif;font-size:12px;color:var(--gold);letter-spacing:3px;text-transform:uppercase;margin-bottom:16px;text-align:center;}
 textarea{width:100%;background:rgba(10,14,26,0.6);border:1px solid rgba(201,168,76,0.25);border-radius:8px;padding:14px 18px;color:var(--white);font-family:'Noto Serif JP',serif;font-size:14px;outline:none;resize:vertical;min-height:80px;line-height:1.8;}
@@ -38,17 +36,14 @@ textarea:focus{border-color:var(--gold);}
 .draw-btn{width:100%;padding:16px;background:linear-gradient(135deg,#8a6a20,var(--gold),#8a6a20);background-size:200% 100%;border:none;border-radius:8px;color:var(--navy);font-family:'Cinzel',serif;font-size:14px;font-weight:700;letter-spacing:3px;cursor:pointer;transition:all 0.4s;margin-top:16px;}
 .draw-btn:hover{background-position:100% 0;box-shadow:0 8px 30px rgba(201,168,76,0.35);transform:translateY(-1px);}
 
-/* ローディング */
 .loading{display:none;text-align:center;padding:60px 20px;}
 .loading-card{width:80px;height:120px;margin:0 auto 24px;background:linear-gradient(135deg,var(--pink),var(--gold));border-radius:8px;animation:cardFlip 1.5s ease-in-out infinite;}
 @keyframes cardFlip{0%,100%{transform:rotateY(0deg);}50%{transform:rotateY(180deg);}}
 .loading-text{font-family:'Cinzel',serif;font-size:13px;color:var(--gold);letter-spacing:3px;animation:blink 1.5s ease-in-out infinite;}
 @keyframes blink{0%,100%{opacity:0.4;}50%{opacity:1;}}
 
-/* 結果 */
 .result{display:none;}
 
-/* 1枚引き結果 */
 .single-result{text-align:center;margin-bottom:24px;}
 .card-container{position:relative;display:inline-block;margin-bottom:24px;}
 .tarot-img{width:200px;height:300px;object-fit:cover;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,0.5),0 0 40px rgba(232,160,192,0.2);border:2px solid rgba(201,168,76,0.3);}
@@ -59,7 +54,6 @@ textarea:focus{border-color:var(--gold);}
 .card-keywords{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-bottom:0;}
 .card-kw{background:rgba(232,160,192,0.1);border:1px solid rgba(232,160,192,0.3);border-radius:20px;padding:5px 14px;font-size:11px;color:var(--pink2);letter-spacing:1px;}
 
-/* 3枚引き */
 .three-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px;}
 @media(max-width:480px){.three-cards{grid-template-columns:repeat(3,1fr);gap:8px;}}
 .three-card-item{text-align:center;}
@@ -68,7 +62,6 @@ textarea:focus{border-color:var(--gold);}
 .three-name{font-family:'Cinzel',serif;font-size:10px;color:var(--gold2);letter-spacing:1px;margin-top:8px;}
 .three-name-jp{font-size:10px;color:rgba(240,234,220,0.4);margin-top:2px;}
 
-/* メッセージ */
 .msg-section{background:linear-gradient(135deg,rgba(26,32,64,0.9),rgba(15,22,40,0.95));border:1px solid rgba(232,160,192,0.2);border-radius:16px;padding:32px;margin-bottom:16px;}
 .msg-title{font-family:'Cinzel',serif;font-size:12px;color:var(--pink2);letter-spacing:3px;text-transform:uppercase;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid rgba(232,160,192,0.15);}
 .msg-text{font-size:14px;line-height:2.2;color:rgba(240,234,220,0.88);}
@@ -79,62 +72,31 @@ textarea:focus{border-color:var(--gold);}
 .three-msg-card{font-family:'Cinzel',serif;font-size:13px;color:var(--pink2);letter-spacing:2px;margin-bottom:10px;}
 .three-msg-text{font-size:13px;line-height:2;color:rgba(240,234,220,0.82);}
 
-/* ① 上部CTA（軽め）：¥500直課金 + LINE サブ */
-.top-cta{background:linear-gradient(135deg,rgba(100,60,140,0.3),rgba(60,30,80,0.4));border:1px solid rgba(201,168,76,0.35);border-radius:14px;padding:20px;margin-bottom:20px;text-align:center;}
-.top-cta-lead{font-size:12px;color:rgba(240,234,220,0.5);letter-spacing:1px;margin-bottom:6px;}
-.top-cta-title{font-size:15px;color:#f5e0a0;font-weight:500;margin-bottom:14px;}
-.top-cta-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-.top-cta-pay{display:block;background:linear-gradient(135deg,#8a6a20,var(--gold),#8a6a20);background-size:200% 100%;border-radius:8px;color:var(--navy);font-family:Cinzel,serif;font-size:12px;font-weight:700;letter-spacing:1px;padding:12px 16px;text-decoration:none;transition:all 0.3s;}
-.top-cta-pay:hover{background-position:100% 0;transform:translateY(-1px);}
-.top-cta-line{display:block;background:transparent;border:1px solid rgba(201,168,76,0.4);border-radius:8px;color:rgba(240,234,220,0.6);font-family:Cinzel,serif;font-size:11px;letter-spacing:1px;padding:12px 16px;text-decoration:none;transition:all 0.3s;}
-.top-cta-line:hover{border-color:var(--gold);color:var(--gold2);}
+/* ★ 手相ナッジ */
+.teso-nudge{background:linear-gradient(135deg,rgba(232,160,192,0.12),rgba(180,100,160,0.06));border:1px solid rgba(232,160,192,0.25);border-radius:16px;padding:24px;margin-bottom:16px;text-align:center;}
+.teso-nudge-title{font-size:14px;color:rgba(240,234,220,0.9);font-weight:600;margin-bottom:10px;line-height:1.7;}
+.teso-nudge-body{font-size:12px;color:rgba(240,234,220,0.6);line-height:2;margin-bottom:16px;}
+.teso-nudge-btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#06c755,#04a844);border:none;border-radius:10px;color:#fff;font-size:14px;font-weight:700;padding:14px 28px;text-decoration:none;transition:all 0.2s;}
+.teso-nudge-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(6,199,85,0.4);}
 
-/* 有料ブロック */
-.premium-block{background:linear-gradient(135deg,rgba(26,32,64,0.9),rgba(15,22,40,0.95));border:1px solid rgba(201,168,76,0.2);border-radius:16px;margin-bottom:16px;overflow:hidden;}
-.premium-header{padding:18px 28px;border-bottom:1px solid rgba(201,168,76,0.1);font-family:'Cinzel',serif;font-size:12px;color:var(--gold);letter-spacing:3px;display:flex;align-items:center;gap:10px;}
-.premium-badge{background:linear-gradient(135deg,var(--gold),#8a6a20);color:var(--navy);font-size:9px;font-weight:700;padding:3px 8px;border-radius:20px;}
-.premium-preview{padding:20px 28px;position:relative;min-height:90px;}
-.preview-text{font-size:14px;line-height:2;color:rgba(240,234,220,0.4);filter:blur(4px);user-select:none;pointer-events:none;}
-.premium-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 0%,rgba(10,14,26,0.92) 55%);display:flex;align-items:flex-end;justify-content:center;padding-bottom:20px;}
-/* ④ ¥500直課金 */
-.unlock-btn{background:linear-gradient(135deg,rgba(201,168,76,0.15),rgba(201,168,76,0.05));border:1px solid rgba(201,168,76,0.5);border-radius:8px;color:var(--gold2);font-family:'Cinzel',serif;font-size:12px;letter-spacing:2px;padding:10px 24px;cursor:pointer;text-decoration:none;display:inline-block;transition:all 0.3s;}
-.unlock-btn:hover{background:rgba(201,168,76,0.2);transform:translateY(-1px);}
+/* LINE導線 */
+.line-block{background:linear-gradient(135deg,rgba(0,185,0,0.12),rgba(0,150,0,0.08));border:1px solid rgba(0,200,100,0.3);border-radius:16px;padding:24px;margin-bottom:16px;text-align:center;}
+.line-block-title{font-size:13px;color:rgba(240,234,220,0.7);line-height:1.8;margin-bottom:14px;}
+.line-block-title strong{color:#4ede88;display:block;font-size:15px;margin-bottom:4px;}
+.line-btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#06c755,#04a844);border:none;border-radius:10px;color:#fff;font-size:14px;font-weight:700;padding:14px 28px;text-decoration:none;transition:all 0.2s;}
+.line-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(6,199,85,0.4);}
 
-/* ② 下部CTA（強め）：2択グリッド */
-.bottom-cta{background:linear-gradient(135deg,rgba(26,32,64,0.95),rgba(15,22,40,0.98));border:1px solid rgba(201,168,76,0.35);border-radius:16px;padding:24px;margin-bottom:16px;text-align:center;}
-.bottom-cta-title{font-family:'Cinzel',serif;font-size:13px;color:var(--gold);letter-spacing:3px;margin-bottom:16px;}
-.bottom-cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;}
-.bc-pay{background:linear-gradient(135deg,rgba(201,168,76,0.2),rgba(201,168,76,0.08));border:1px solid rgba(201,168,76,0.5);border-radius:12px;padding:16px 10px;text-align:center;text-decoration:none;display:block;transition:all 0.3s;}
-.bc-pay:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(201,168,76,0.2);}
-.bc-pay-label{font-size:9px;color:var(--gold);letter-spacing:2px;margin-bottom:4px;}
-.bc-pay-title{font-size:12px;color:var(--white);font-weight:500;margin-bottom:6px;}
-.bc-pay-price{font-family:'Cinzel',serif;font-size:20px;color:var(--gold);margin-bottom:8px;}
-.bc-pay-btn{display:inline-block;background:linear-gradient(135deg,#8a6a20,var(--gold));color:var(--navy);font-size:11px;font-weight:700;border-radius:8px;padding:6px 12px;}
-.bc-line{background:rgba(240,234,220,0.03);border:1px solid rgba(240,234,220,0.12);border-radius:12px;padding:16px 10px;text-align:center;text-decoration:none;display:block;transition:all 0.3s;}
-.bc-line:hover{border-color:rgba(201,168,76,0.3);}
-.bc-line-label{font-size:9px;color:rgba(240,234,220,0.4);letter-spacing:2px;margin-bottom:4px;}
-.bc-line-title{font-size:12px;color:rgba(240,234,220,0.7);margin-bottom:6px;}
-.bc-line-free{font-family:'Cinzel',serif;font-size:20px;color:#7ac4a0;margin-bottom:8px;}
-.bc-line-btn{display:inline-block;background:linear-gradient(135deg,#1a7a3c,#2a8a50);color:#fff;font-size:11px;font-weight:700;border-radius:8px;padding:6px 12px;}
-
-/* ¥1,980直課金 */
-.mid-block{background:linear-gradient(135deg,rgba(100,60,140,0.2),rgba(60,30,80,0.15));border:1px solid rgba(155,89,182,0.35);border-radius:12px;padding:16px;text-align:center;margin-bottom:12px;text-decoration:none;display:block;transition:all 0.3s;}
-.mid-block:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(155,89,182,0.2);}
-.mid-label{font-size:10px;color:#c4a8f0;letter-spacing:2px;margin-bottom:4px;}
-.mid-title{font-size:13px;color:var(--white);font-weight:500;}
-.mid-price{font-family:'Cinzel',serif;font-size:18px;color:#c4a8f0;margin:4px 0;}
-.mid-note{font-size:10px;color:rgba(240,234,220,0.4);}
-
-/* 総合鑑定 */
+/* ★ AI総合鑑定（統一版） */
 .bundle{background:linear-gradient(135deg,rgba(100,80,30,0.3),rgba(60,40,10,0.4));border:1px solid rgba(201,168,76,0.4);border-radius:16px;padding:32px;text-align:center;margin-bottom:20px;}
-.bundle-title{font-family:'Cinzel',serif;font-size:15px;color:var(--gold2);letter-spacing:3px;margin-bottom:10px;}
-.bundle-desc{font-size:13px;color:rgba(240,234,220,0.6);line-height:1.9;margin-bottom:20px;}
-.bundle-price{font-family:'Cinzel',serif;font-size:28px;color:var(--gold);margin-bottom:4px;}
-.bundle-price-sub{font-size:12px;color:rgba(240,234,220,0.4);margin-bottom:20px;}
+.bundle-label{font-family:'Cinzel',serif;font-size:10px;color:var(--gold);letter-spacing:3px;text-transform:uppercase;margin-bottom:10px;opacity:0.8;}
+.bundle-title{font-family:'Cinzel',serif;font-size:16px;color:var(--gold2);letter-spacing:2px;margin-bottom:10px;}
+.bundle-desc{font-size:13px;color:rgba(240,234,220,0.7);line-height:1.9;margin-bottom:16px;}
+.bundle-price-orig{font-size:12px;color:rgba(240,234,220,0.4);text-decoration:line-through;margin-bottom:4px;}
+.bundle-price{font-family:'Cinzel',serif;font-size:30px;color:var(--gold);margin-bottom:4px;}
+.bundle-price-sub{font-size:11px;color:rgba(240,234,220,0.4);margin-bottom:20px;}
 .bundle-btn{display:inline-block;background:linear-gradient(135deg,#8a6a20,var(--gold),#8a6a20);border:none;border-radius:8px;color:var(--navy);font-family:'Cinzel',serif;font-size:13px;font-weight:700;letter-spacing:2px;padding:14px 36px;cursor:pointer;text-decoration:none;transition:all 0.3s;}
 .bundle-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(201,168,76,0.3);}
 
-/* ③ 回遊導線 */
 .rec-section{margin-bottom:20px;}
 .rec-title{font-family:'Cinzel',serif;font-size:11px;color:var(--gold);letter-spacing:3px;text-align:center;margin-bottom:14px;opacity:0.8;}
 .rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
@@ -152,14 +114,12 @@ textarea:focus{border-color:var(--gold);}
 .footer-text{font-size:11px;color:rgba(240,234,220,0.25);}
 
 @media(max-width:480px){
-  .question-card,.msg-section,.bundle,.bottom-cta{padding:24px 18px;}
+  .question-card,.msg-section,.bundle{padding:24px 18px;}
   .three-msg-item{padding:18px;}
-  .premium-header,.premium-preview{padding-left:18px;padding-right:18px;}
 }
 </style>
 </head>
 <body>
-<!-- ヘッダー（戻るリンク付き） -->
 <div style="position:sticky;top:0;z-index:1000;background:linear-gradient(135deg,rgba(10,14,26,0.97),rgba(15,20,40,0.98));border-bottom:1px solid rgba(201,168,76,0.2);padding:10px 20px;display:flex;align-items:center;justify-content:space-between;">
   <a href="https://twinkle-lab.jp/star" style="font-size:12px;color:rgba(201,168,76,0.7);text-decoration:none;letter-spacing:1px;">← ポータルに戻る</a>
   <div style="font-family:Cinzel,serif;font-size:12px;color:#c9a84c;letter-spacing:2px;text-align:center;">✦ Twinkle Star Oracle ✦</div>
@@ -203,16 +163,6 @@ textarea:focus{border-color:var(--gold);}
 
   <div class="result" id="js-result">
 
-    <!-- ① 上部CTA（軽め）：¥500直課金 + LINE サブ -->
-    <div class="top-cta">
-      <div class="top-cta-lead">ここまでは表面の結果です</div>
-      <div class="top-cta-title">🔮 本当の運命はここからです</div>
-      <div class="top-cta-row">
-        <a href="https://buy.stripe.com/00w14g2j46C66oBcFl33W04" target="_blank" class="top-cta-pay">✦ 今すぐ詳しく知る（¥500）</a>
-        <a href="https://lin.ee/XHDFrA8" target="_blank" class="top-cta-line">💬 あとで受け取る（LINE）</a>
-      </div>
-    </div>
-
     <!-- 1枚引き結果 -->
     <div id="js-single-result">
       <div class="single-result">
@@ -228,13 +178,6 @@ textarea:focus{border-color:var(--gold);}
       <div class="msg-section">
         <div class="msg-title">✦ カードからのメッセージ</div>
         <div class="msg-text" id="js-card-msg"></div>
-        <div style="position:relative;margin-top:12px;">
-          <div class="msg-text" id="js-card-msg-blur" style="filter:blur(5px);user-select:none;pointer-events:none;opacity:0.5;"></div>
-          <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 0%,rgba(10,14,26,0.97) 50%);display:flex;align-items:flex-end;justify-content:center;padding-bottom:16px;">
-            <!-- ④ ¥500直課金（ここもLINEではなく直課金） -->
-            <a href="https://buy.stripe.com/00w14g2j46C66oBcFl33W04" target="_blank" class="unlock-btn">✦ 今すぐ詳しく知る（¥500）</a>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -244,63 +187,45 @@ textarea:focus{border-color:var(--gold);}
       <div class="three-msgs" id="js-three-msgs"></div>
     </div>
 
-    <!-- ④ ¥500直課金 プレミアムブロック -->
-    <div class="premium-block">
-      <div class="premium-header">✦ カードの深層メッセージ <span class="premium-badge">PREMIUM</span></div>
-      <div class="premium-preview">
-        <p class="preview-text">このカードがあなたの潜在意識に語りかけているより深いメッセージを解読します。シャドウワークの観点から、あなたが今向き合うべき内なる課題と、それを乗り越えた先に待つ...</p>
-        <div class="premium-overlay">
-          <a href="https://buy.stripe.com/00w14g2j46C66oBcFl33W04" target="_blank" class="unlock-btn">✦ 今すぐ詳しく知る（¥500）</a>
-        </div>
+    <!-- ★ 手相ナッジ（結果直下） -->
+    <div class="teso-nudge">
+      <div class="teso-nudge-title">🤲 より詳しく知りたい方へ</div>
+      <div class="teso-nudge-body">
+        この占いは"今の流れ"を示しますが、<br/>
+        あなたの本質や人生の流れは手相にも表れます。<br/>
+        無料手相診断では、左手と右手から<br/>
+        本来の自分と今の状態を読み解きます。
       </div>
-    </div>
-
-    <div class="premium-block">
-      <div class="premium-header">✦ 恋愛・仕事・金運への具体的アドバイス <span class="premium-badge">PREMIUM</span></div>
-      <div class="premium-preview">
-        <p class="preview-text">引いたカードを恋愛・仕事・金運それぞれの観点から詳しく解読します。今のあなたが取るべき具体的な行動と、避けるべきことを明確にお伝えします...</p>
-        <div class="premium-overlay">
-          <a href="https://buy.stripe.com/00w14g2j46C66oBcFl33W04" target="_blank" class="unlock-btn">✦ 今すぐ詳しく知る（¥500）</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- ② 下部CTA（強め）：2択 + ¥1,980 + ¥3,980 -->
-    <div class="bottom-cta">
-      <div class="bottom-cta-title">✦ もっと深く知りたい方へ ✦</div>
-      <div class="bottom-cta-grid">
-        <a href="https://buy.stripe.com/00w14g2j46C66oBcFl33W04" target="_blank" class="bc-pay">
-          <div class="bc-pay-label">即・結果表示</div>
-          <div class="bc-pay-title">今すぐ詳しく見る</div>
-          <div class="bc-pay-price">¥500</div>
-          <span class="bc-pay-btn">今すぐ鑑定する</span>
-        </a>
-        <a href="https://lin.ee/XHDFrA8" target="_blank" class="bc-line">
-          <div class="bc-line-label">完全無料</div>
-          <div class="bc-line-title">じっくり知りたい方へ</div>
-          <div class="bc-line-free">¥0</div>
-          <span class="bc-line-btn">💬 無料で受け取る</span>
-        </a>
-      </div>
-      <!-- ¥1,980直課金 -->
-      <a href="https://buy.stripe.com/14A8wIbTEf8C9ANfRx33W03" target="_blank" class="mid-block">
-        <div class="mid-label">3テーマ詳細鑑定</div>
-        <div class="mid-title">しっかり知りたい方へ</div>
-        <div class="mid-price">¥1,980</div>
-        <div class="mid-note">恋愛・仕事・金運をまとめて · 即時表示</div>
+      <a href="https://lin.ee/XHDFrA8" class="teso-nudge-btn" target="_blank" rel="noopener">
+        💬 LINEで無料手相診断を受ける
       </a>
     </div>
 
-    <!-- 総合鑑定（¥3,980・直リンク） -->
-    <div class="bundle">
-      <div class="bundle-title">✦ AI総合鑑定 ✦</div>
-      <p class="bundle-desc">ホロスコープ ＋ 四柱推命 ＋ タロット3枚 ＋ 数秘術<br>過去・現在・未来をAIが完全解析します</p>
-      <div class="bundle-price">¥3,980</div>
-      <div class="bundle-price-sub">即時表示 · PDFダウンロード付き · 🔒 安全な決済</div>
-      <a href="https://twinkle-lab.jp/star/sogo" class="bundle-btn">✦ AI総合鑑定を受ける ✦</a>
+    <!-- LINE導線 -->
+    <div class="line-block">
+      <div class="line-block-title">
+        <strong>🎁 LINE登録で特典を受け取る</strong>
+        開運情報・限定占いをLINEでお届けします
+      </div>
+      <a href="https://lin.ee/XHDFrA8" class="line-btn" target="_blank" rel="noopener">
+        💬 LINEで登録する（無料）
+      </a>
     </div>
 
-    <!-- ③ 回遊導線 -->
+    <!-- ★ AI総合鑑定（統一文言） -->
+    <div class="bundle">
+      <div class="bundle-label">✦ Premium · AI完全解析 ✦</div>
+      <div class="bundle-title">AI総合鑑定（手相＋複数占術）</div>
+      <div class="bundle-desc">
+        手相・タロット・数秘術・ホロスコープなどを組み合わせ、<br/>
+        恋愛・仕事・金運・人生の流れを総合的に読み解きます
+      </div>
+      <div class="bundle-price-orig">通常¥4,980相当</div>
+      <div class="bundle-price">¥3,980</div>
+      <div class="bundle-price-sub">鑑定結果はLINEでお届け · PDF送付</div>
+      <a href="https://twinkle-lab.jp/star/sogo" class="bundle-btn">✦ AI総合鑑定を申し込む ✦</a>
+    </div>
+
     <div class="rec-section">
       <div class="rec-title">✦ あなたにおすすめの占い ✦</div>
       <div class="rec-grid">
@@ -428,10 +353,8 @@ document.getElementById('js-btn').addEventListener('click', function() {
       }
       document.getElementById('js-card-keywords').innerHTML = kwHtml;
 
-      var _fullMsg = (d.reversed ? d.card.reversed : d.card.upright);
-      var _half = Math.floor(_fullMsg.length / 2);
-      document.getElementById('js-card-msg').innerHTML = _fullMsg.substring(0, _half).replace(/\n/g, '<br>');
-      document.getElementById('js-card-msg-blur').innerHTML = _fullMsg.substring(_half).replace(/\n/g, '<br>');
+      var fullMsg = (d.reversed ? d.card.reversed : d.card.upright);
+      document.getElementById('js-card-msg').innerHTML = fullMsg.replace(/\n/g, '<br>');
 
     } else {
       document.getElementById('js-single-result').style.display = 'none';
@@ -466,15 +389,5 @@ document.getElementById('js-retry').addEventListener('click', function() {
   window.scrollTo(0, 0);
 });
 </script>
-
-<!-- 固定バナー：¥500直課金に変更 -->
-<div id="fixed-line-banner" style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:linear-gradient(135deg,#1a0a20,#0a0e1a);border-top:1px solid rgba(201,168,76,0.4);padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 -4px 20px rgba(0,0,0,0.4);">
-  <div style="flex:1;">
-    <div style="font-size:11px;color:rgba(240,234,220,0.5);letter-spacing:1px;margin-bottom:2px;">🔮 即・結果表示</div>
-    <div style="font-size:13px;color:#f0eadc;font-weight:500;line-height:1.4;">今すぐ詳しく知る（¥500）</div>
-  </div>
-  <a href="https://buy.stripe.com/00w14g2j46C66oBcFl33W04" target="_blank" style="background:linear-gradient(135deg,#8a6a20,#c9a84c,#8a6a20);background-size:200% 100%;border:none;border-radius:8px;color:#0a0e1a;font-family:Cinzel,serif;font-size:12px;font-weight:700;letter-spacing:1px;padding:12px 20px;text-decoration:none;white-space:nowrap;flex-shrink:0;">今すぐ鑑定する →</a>
-</div>
-<div style="height:70px;"></div>
 </body>
 </html>
